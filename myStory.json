@@ -1,0 +1,368 @@
+{
+    "Title": "Hourglass",
+    "Credits": "Created by Nityam Thakur (nthakur1@ucsc.edu).",
+    "InitialLocation": "DimlyLitRoom",
+    "Locations": {
+        "DimlyLitRoom": {
+            "Body": "You find yourself in a dimly lit room. In the center, there's a mysterious hourglass on a pedestal.",
+            "Choices": [
+                {
+                    "Text": "Examine the hourglass",
+                    "Target": "ExamineHourglass"
+                },
+                {
+                    "Text": "Look around the room",
+                    "Target": "LookAroundRoom"
+                }
+            ]
+        },
+        "ExamineHourglass": {
+            "Body": "As you approach the hourglass, you notice it's filled with shimmering sand that seems to flow endlessly between its two bulbs. The sand appears to be magical.",
+            "Choices": [
+                {
+                    "Text": "Take the hourglass",
+                    "Target": "TakeHourglass"
+                },
+                {
+                    "Text": "Leave it and look around",
+                    "Target": "LookAroundRoom"
+                }
+            ]
+        },
+        "LookAroundRoom": {
+            "Body": "You see an old lamp on a table and a dusty book on a shelf.",
+            "Choices": [
+                {
+                    "Text": "Take the lamp",
+                    "Target": "TakeLamp"
+                },
+                {
+                    "Text": "Read the book",
+                    "Target": "ReadBook"
+                }
+            ]
+        },
+        "TakeLamp": {
+            "Body": "You take the lamp. It might be useful in dark places.",
+            "Items": ["Lamp"],
+            "Choices": [
+                {
+                    "Text": "Examine the hourglass",
+                    "Target": "ExamineHourglass"
+                },
+                {
+                    "Text": "Read the book",
+                    "Target": "ReadBook"
+                }
+            ]
+        },
+        "ReadBook": {
+            "Body": "The book tells a tale of an ancient amulet hidden in a mysterious realm. It might be important.",
+            "Choices": [
+                {
+                    "Text": "Examine the hourglass",
+                    "Target": "ExamineHourglass"
+                },
+                {
+                    "Text": "Take the hourglass",
+                    "Target": "TakeHourglass"
+                }
+            ]
+        },
+        "TakeHourglass": {
+            "Body": "You carefully pick up the hourglass. As you lift it off the pedestal, the room starts to spin, and you feel a strange sensation.",
+            "Choices": [
+                {
+                    "Text": "Find yourself in the desert",
+                    "Target": "Desert"
+                }
+            ]
+        },
+        "Desert": {
+            "Body": "You suddenly find yourself in the scorching desert, surrounded by vast dunes of sand. The hourglass is still in your hand.",
+            "Choices": [
+                {
+                    "Text": "Climb the nearest dune to get a better view",
+                    "Target": "DuneTop"
+                },
+                {
+                    "Text": "Look around for shelter",
+                    "Target": "LookForShelter"
+                }
+            ]
+        },
+        "DuneTop": {
+            "Body": "From one side of the Dune Top, you see a hidden cave with a bright ambience emitted. From the other side, you see some palm trees accompanied by the sound of flowing water. Where do you go?",
+            "Choices": [
+                {
+                    "Text": "Enter the hidden cave",
+                    "Target": "HiddenCave"
+                },
+                {
+                    "Text": "Go to the palm trees",
+                    "Target": "PalmTrees"
+                }
+            ]
+        },
+        "LookForShelter": {
+            "Body": "You find a small rock formation that provides some shade. There is a narrow passage leading to a dark cave.",
+            "Choices": [
+                {
+                    "Text": "Enter the cave",
+                    "Target": "HiddenCave",
+                    "Requires": "Lamp"
+                },
+                {
+                    "Text": "Return to the dune",
+                    "Target": "DuneTop"
+                }
+            ]
+        },
+        "HiddenCave": {
+            "Body": "You cautiously enter the hidden cave. It's too dark to see anything without a light.",
+            "Choices": [
+                {
+                    "Text": "Use the lamp to light the way",
+                    "Target": "CaveWithLamp",
+                    "Requires": "Lamp"
+                },
+                {
+                    "Text": "Leave the cave",
+                    "Target": "DuneTop"
+                }
+            ]
+        },
+        "CaveWithLamp": {
+            "Body": "With the lamp illuminating the cave, you find a glowing crystal.",
+            "Choices": [
+                {
+                    "Text": "Approach the glowing crystal",
+                    "Target": "GlowingCrystal"
+                }
+            ]
+        },
+        "GlowingCrystal": {
+            "Body": "The glowing crystal emits a gentle light and seems to resonate with the hourglass in your hand. You sense a connection between them.",
+            "Choices": [
+                {
+                    "Text": "Touch the crystal with the hourglass",
+                    "Target": "TouchCrystal"
+                }
+            ]
+        },
+        "TouchCrystal": {
+            "Body": "As you touch the crystal with the hourglass, a surge of energy courses through you. The hourglass begins to glow, and you feel a powerful force enveloping you.",
+            "Choices": [
+                {
+                    "Text": "Embrace the power and let it take you somewhere else",
+                    "Target": "SurrealRealm"
+                }
+            ]
+        },
+        "SurrealRealm": {
+            "Body": "You find yourself in a surreal realm, filled with ethereal landscapes and enigmatic creatures.",
+            "Choices": [
+                {
+                    "Text": "Examine the surroundings in this mysterious realm",
+                    "Target": "MysteriousRealm"
+                }
+            ]
+        },
+        "MysteriousRealm": {
+            "Body": "As you explore the mysterious realm, you encounter strange beings and witness magical phenomena. It's a realm of wonders beyond comprehension. You are not able to understand the native language of the creatures. However, one of the creatures points towards the Hourglass in your pocket.",
+            "Choices": [
+                {
+                    "Text": "Hold the Hourglass in your hands",
+                    "Target": "HoldHourglass"
+                }
+            ]
+        },
+        "HoldHourglass": {
+            "Body": "It's a miracle! You can now understand the foreign creatures. You find an amulet on the ground, which the creatures seem to revere.",
+            "Items": ["Amulet"],
+            "Choices": [
+                {
+                    "Text": "Take the amulet",
+                    "Target": "TakeAmulet"
+                }
+            ]
+        },
+        "TakeAmulet": {
+            "Body": "You pick up the amulet and feel its power. The creatures gesture towards three paths that lead out of the realm.",
+            "Choices": [
+                {
+                    "Text": "Ask the creature how to get back home",
+                    "Target": "AskCreature"
+                }
+            ]
+        },
+        "AskCreature": {
+            "Body": "Upon engaging in conversation with the native, you find out that there is only one person that can get you home: The Time-Keeping Wizard. You learn that he lives in Tick-Tock Town to which there are three ways. Which one do you choose?",
+            "Choices": [
+                {
+                    "Text": "The Ancient Ruins",
+                    "Target": "AncientRuins"
+                },
+                {
+                    "Text": "The Enchanted Forest",
+                    "Target": "EnchantedForest"
+                },
+                {
+                    "Text": "The Mystical River",
+                    "Target": "MysticalRiver"
+                }
+            ]
+        },
+        "AncientRuins": {
+            "Body": "You navigate through the Ancient Ruins, facing various challenges and uncovering old secrets. You find a locked gate that requires an amulet to open.",
+            "Choices": [
+                {
+                    "Text": "Use the amulet to unlock the gate",
+                    "Target": "TickTockTown",
+                    "Requires": "Amulet"
+                },
+                {
+                    "Text": "Look around the ruins",
+                    "Target": "LookAroundRuins"
+                }
+            ]
+        },
+        "LookAroundRuins": {
+            "Body": "You find an ancient inscription that seems to describe the history of the ruins. It mentions a hidden chamber.",
+            "Choices": [
+                {
+                    "Text": "Search for the hidden chamber",
+                    "Target": "HiddenChamber"
+                },
+                {
+                    "Text": "Use the amulet to unlock the gate",
+                    "Target": "TickTockTown",
+                    "Requires": "Amulet"
+                }
+            ]
+        },
+        "HiddenChamber": {
+            "Body": "You discover a hidden chamber with treasures and another glowing crystal.",
+            "Choices": [
+                {
+                    "Text": "Touch the crystal",
+                    "Target": "TouchCrystal"
+                },
+                {
+                    "Text": "Take some treasures",
+                    "Target": "TakeTreasures"
+                }
+            ]
+        },
+        "TakeTreasures": {
+            "Body": "You take some treasures. They might be useful later.",
+            "Items": ["Treasures"],
+            "Choices": [
+                {
+                    "Text": "Use the amulet to unlock the gate",
+                    "Target": "TickTockTown",
+                    "Requires": "Amulet"
+                }
+            ]
+        },    "EnchantedForest": {
+            "Body": "You wander through the Enchanted Forest, encountering magical creatures and avoiding traps. There is a magical tree that seems interactive.",
+            "Choices": [
+                {
+                    "Text": "Talk to the magical tree",
+                    "Target": "MagicalTree"
+                },
+                {
+                    "Text": "Continue through the forest",
+                    "Target": "ContinueForest"
+                }
+            ]
+        },
+        "MagicalTree": {
+            "Body": "The magical tree speaks to you in riddles and gives you a hint: 'Seek the amulet to find your way.'",
+            "Choices": [
+                {
+                    "Text": "Thank the tree and continue",
+                    "Target": "ContinueForest"
+                }
+            ]
+        },
+        "ContinueForest": {
+            "Body": "You thank the tree and continue through the forest. You find a hidden path that leads to Tick-Tock Town.",
+            "Choices": [
+                {
+                    "Text": "Enter Tick-Tock Town",
+                    "Target": "TickTockTown"
+                }
+            ]
+        },
+        "MysticalRiver": {
+            "Body": "You travel along the Mystical River, solving riddles and navigating treacherous waters. You finally find a boatman who takes you to Tick-Tock Town.",
+            "Choices": [
+                {
+                    "Text": "Enter Tick-Tock Town",
+                    "Target": "TickTockTown"
+                }
+            ]
+        },
+        "TickTockTown": {
+            "Body": "You arrive in Tick-Tock Town, a place where time flows differently. You find the Time-Keeping Wizard's tower in the center of the town.",
+            "Choices": [
+                {
+                    "Text": "Enter the tower",
+                    "Target": "WizardTower"
+                }
+            ]
+        },
+        "WizardTower": {
+            "Body": "You enter the tower and meet the Time-Keeping Wizard. He listens to your story and agrees to help you return home.",
+            "Choices": [
+                {
+                    "Text": "Thank the Wizard",
+                    "Target": "ThankWizard"
+                }
+            ]
+        },
+        "ThankWizard": {
+            "Body": "The Time-Keeping Wizard smiles and waves his hand. You feel a rush of wind and a bright light envelops you. When you open your eyes, you find yourself back home, safe and sound.",
+            "Choices": [
+                {
+                    "Text": "The end.",
+                    "Target": "End"
+                }
+            ]
+        },
+        "PalmTrees": {
+            "Body": "You walk towards the palm trees and find a beautiful oasis with fresh water and fruit-bearing trees. You take a moment to rest and replenish your strength.",
+            "Choices": [
+                {
+                    "Text": "Explore further",
+                    "Target": "OasisExploration"
+                }
+            ]
+        },
+        "OasisExploration": {
+            "Body": "As you explore the oasis, you find a hidden path that leads to a mysterious garden filled with rare flowers and plants. In the center, there is a portal.",
+            "Choices": [
+                {
+                    "Text": "Enter the portal",
+                    "Target": "SurrealRealm"
+                }
+            ]
+        },
+        "End": {
+            "Body": "Congratulations! You’ve completed the adventure of the Hourglass Beta. Thank you for playing.",
+            "Choices": []
+        }
+    },
+    "Items": {
+        "Amulet": {
+            "Description": "A magical amulet found in the Mysterious Realm."
+        },
+        "Lamp": {
+            "Description": "An old lamp that can light up dark places."
+        },
+        "Treasures": {
+            "Description": "Ancient treasures from the hidden chamber in the ruins."
+        }
+    }
+}
